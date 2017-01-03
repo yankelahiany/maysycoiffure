@@ -253,7 +253,7 @@ $(document).ready(function(){
 	$('.countdown').each(function(){
 		$(this).countdown({until: new Date($(this).attr('data-date'))});
 	});
-    /*
+    
     // Project Planner Form
     
     $('.planner-option').click(function(){
@@ -459,7 +459,6 @@ $(document).ready(function(){
             return error;
         }
     // End contact form code
-        */
 
 
 	// Make map draggable when click
