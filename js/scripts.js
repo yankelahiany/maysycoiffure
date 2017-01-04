@@ -232,7 +232,13 @@ $(document).ready(function(){
     });
     
     // Instagram Feed
-    
+        
+    var feed = new Instafeed({
+        get: 'maysycoiffure',
+        clientId: '7673140f2907490ab9aef021f786a9b1'
+    });
+    feed.run();
+   /* 
     if($('.instafeed').length){
     	jQuery.fn.spectragram.accessData = {
 			accessToken: '4355951467.7673140.604baf4845944b8fa4866f680e748739',
@@ -246,7 +252,7 @@ $(document).ready(function(){
                 max: 12
             });
         });
-    }   
+    } */ 
     
     // Countdown
 	
