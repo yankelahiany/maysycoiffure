@@ -3599,7 +3599,7 @@ iframe {
   margin-top: 0;
 }
 .pricing-table-1:hover .pricing-details {
-  max-height: 400px;
+  max-height: 600px;
   opacity: 1;
   padding-bottom: 32px;
 }
