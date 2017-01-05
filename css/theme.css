@@ -3785,8 +3785,12 @@ iframe {
   opacity: 1;
 }
 .instagram-1 {
-  height: 250px;
+  max-height: 1100px;
   overflow: hidden;
+}
+
+.snapwidget-widget {
+    padding: 20px;
 }
 .instagram-1 li {
   height: 100%;
