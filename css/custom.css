@@ -1,4 +1,13 @@
-
+#checkout-options{
+    background: transparent;
+    margin-right: 10px;
+    display: inline;
+}
+#checkout-button-price{
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .small-pad{
     padding: 50px 0;
 }

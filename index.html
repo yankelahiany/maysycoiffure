@@ -391,8 +391,23 @@
 
                 <div class="content">
                   <h3>Profitez d'achats en carte cadeau utilisable en salon</h3>
-
-                  <a class="btn btn-white btn-sm4" href="#" target="_blank">Carte Cadeau  </a>
+                  <select class="btn btn-white" id="checkout-options" name="checkout-options">
+                    <option value="price_1H9dSSFvdd9nhPzBFbgAMwXG">25$</option>
+                    <option selected value="price_1H9dSSFvdd9nhPzBVQgPyhq1">50$</option>
+                    <option value="price_1H9dSSFvdd9nhPzBYw6V0SuE">75$</option>
+                    <option value="price_1H9dSSFvdd9nhPzBh6bboUAp">100$</option>
+                    <option value="price_1H9dSSFvdd9nhPzBODfV0bYO">125$</option>
+                    <option value="price_1H9dSTFvdd9nhPzBBN46qdgs">150$</option>
+                  </select>
+                  <a
+                    class="btn btn-white"
+                    id="checkout-button-price"
+                    role="link"
+                    type="button"
+                  >
+                    Acheter 
+                  </a>
+                  <div id="error-message"></div>
                 </div>
               </div>
 
@@ -556,17 +571,42 @@
     <script src="js/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script src="https://js.stripe.com/v3"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/flexslider.min.js"></script>
-    <script src="js/lightbox.min.js"></script>
-    <script src="js/twitterfetcher.min.js"></script>
-    <script src="js/spectragram.min.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/jquery.plugin.min.js"></script>
     <script src="js/placeholders.min.js"></script>
-    <script src="js/countdown.min.js"></script>
-    <script src="js/parallax.js"></script>
+
     <script src="js/scripts.js"></script>
+    <script>      
+      (function() {
+        var stripe = Stripe('pk_live_51H76p7Fvdd9nhPzBKPXhj1IBAodV7dHVk3wVsivP3wKCvsF2SasvBjZQJsLLzX9eVzJ9ZCRHFPXfN1ETBJgkSFHi002aPOmMnn');
+
+        var checkoutButton = document.getElementById('checkout-button-price');
+        checkoutButton.addEventListener('click', function () {
+          // When the customer clicks on the button, redirect
+          // them to Checkout.
+          stripe.redirectToCheckout({
+            lineItems: [{price: document.getElementById('checkout-options').value, quantity: 1}],
+            mode: 'payment',
+            // Do not rely on the redirect to the successUrl for fulfilling
+            // purchases, customers may not always reach the success_url after
+            // a successful payment.
+            // Instead use one of the strategies described in
+            // https://stripe.com/docs/payments/checkout/fulfillment
+            successUrl: 'http://maysycoiffure.com/',
+            cancelUrl: 'http://maysycoiffure.com/',
+          })
+          .then(function (result) {
+            if (result.error) {
+              // If `redirectToCheckout` fails due to a browser or network
+              // error, display the localized error message to your customer.
+              var displayError = document.getElementById('error-message');
+              displayError.textContent = result.error.message;
+            }
+          });
+        });
+      })();
+      </script>
   </body>
 </html>
