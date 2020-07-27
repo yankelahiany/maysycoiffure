@@ -1,8 +1,43 @@
 
+.small-pad{
+    padding: 50px 0;
+}
 .instagram-1{
     overflow-y: auto;
     height: 1000px;
 }
 .contained-projects .background-image-holder {
-    height: 500px;
+    height: 400px;
 }
+h2{
+    font-size: 26px;
+}
+section {
+    background: #fff;
+    padding:30px 0;
+}
+.promo-1 {
+    padding: 30px 0;
+}
+.pricing-table-1:nth-child(1), .pricing-table-1:nth-child(1) .pricing-details {
+    background: #230A59;
+}
+.pricing-table-1:nth-child(2), .pricing-table-1:nth-child(2) .pricing-details {
+    background: #3E38F2;
+}
+.pricing-table-1:nth-child(3), .pricing-table-1:nth-child(3) .pricing-details {
+    background: #5C73F2;
+}
+.page-header.short {
+    padding: 220px 0;
+} 
+footer {
+    padding:20px 0;
+}
+footer:nth-child(2n+1){
+    background: white;
+}
+.feature-box h3 {
+    color: white;
+    font-weight: 400;
+ }
