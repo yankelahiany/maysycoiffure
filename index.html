@@ -180,8 +180,8 @@
                     >
                   </li>
                   <li>
-                    <a href="#emplacements" class="inner-link" target="_self"
-                      >Emplacements</a
+                    <a href="#boutiques" class="inner-link" target="_self"
+                      >Boutiques</a
                     >
                   </li>
                   <li>
@@ -190,8 +190,8 @@
                     >
                   </li>
                   <li>
-                    <a href="#boutiques" class="inner-link" target="_self"
-                      >Boutiques</a
+                    <a href="#emplacements" class="inner-link" target="_self"
+                      >Emplacements</a
                     >
                   </li>
                   <li>
@@ -243,68 +243,90 @@
       <div class="nav-container"></div>
 
       <div class="main-container">
-        <a id="emplacements" class="in-page-link"></a>
-
-        <section class="contained-projects">
+        <section>
+          <a id="boutiques" class="in-page-link"></a>
           <div class="container">
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-12">
                 <div class="text-block">
                   <div class="detail-line"></div>
-                  <h5>Nos emplacements</h5>
+                  <h5>Nos boutiques</h5>
                 </div>
               </div>
             </div>
-
             <div class="row">
-              <div class="col-sm-6 project col-md-6" data-filter="development">
-                <a href="#emplacements">
-                  <div class="salon background-image-holder">
-                    <img
-                      alt="project image"
-                      class="background-image"
-                      src="img/st-jerome.jpg"
-                    />
-                  </div>
-                </a>
-                <h2>Le Carrefour du Nord</h2>
-                <span
-                  ><a href="https://goo.gl/maps/YUr5aZcgQb92" target="_blank"
-                    >900 Av. Grignon, St-Jérome, J7Y 3S7</a
+              <div class="col-md-4 feature-box">
+                <div class="background-image-holder overlay">
+                  <img
+                    alt="Slide Background"
+                    class="background-image"
+                    src="img/giftcard.jpg"
+                  />
+                </div>
+
+                <div class="content">
+                  <h3>Profitez d'achats en carte cadeau utilisable en salon</h3>
+                  <select class="btn btn-white" id="checkout-options" name="checkout-options">
+                    <option value="price_1H9dSSFvdd9nhPzBFbgAMwXG">25$</option>
+                    <option selected value="price_1H9dSSFvdd9nhPzBVQgPyhq1">50$</option>
+                    <option value="price_1H9dSSFvdd9nhPzBYw6V0SuE">75$</option>
+                    <option value="price_1H9dSSFvdd9nhPzBh6bboUAp">100$</option>
+                    <option value="price_1H9dSSFvdd9nhPzBODfV0bYO">125$</option>
+                    <option value="price_1H9dSTFvdd9nhPzBBN46qdgs">150$</option>
+                  </select>
+                  <a
+                    class="btn btn-white"
+                    id="checkout-button-price"
+                    role="link"
+                    type="button"
                   >
-                  <br /><a href="tel:+14504324892">(450) 432-4892</a></span
-                >
-                <h5>
-                  Lundi, Mardi : 9h 30 - 18h 00 <br />Mercredi, Jeudi, Vendredi
-                  : 9h 30 - 21h 00 <br />Samedi : 9h 00 - 17h 00 / Dimanche :
-                  10h 00 - 17h 00
-                </h5>
+                    Acheter 
+                  </a>
+                  <div id="error-message"></div>
+                </div>
               </div>
 
-              <div
-                class="col-sm-6 project col-md-6"
-                data-filter="branding,development"
-              >
-                <a href="#emplacements">
-                  <div class="salon background-image-holder">
-                    <img
-                      alt="project image"
-                      class="background-image"
-                      src="img/versaille1.jpg"
-                    />
-                  </div>
-                </a>
-                <h2>La Place Versailles</h2>
-                <span
-                  ><a href="https://goo.gl/maps/Z5wz1pMV5rN2" target="_blank"
-                    >7275 rue Sherbrooke est, Montréal, H1N 1E9</a
+              <div class="col-md-4 feature-box">
+                <div class="background-image-holder overlay">
+                  <img
+                    alt="Slide Background"
+                    class="background-image"
+                    src="img/shop3.jpg"
+                  />
+                </div>
+
+                <div class="content">
+                  <h3>Ne manquez pas notre boutique en ligne Moroccanoil</h3>
+
+				  <a class="btn btn-white btn-sm4" href="#" target="_blank"
+                    >Bientôt disponible</a
                   >
-                  <br /><a href="tel:+15144934662">(514) 493-4662</a></span
-                >
-                <h5>
-                  Lundi au Vendredi : 9h 30 - 21h 00 <br />Samedi : 9h 00 - 17h
-                  00 <br />Dimanche : 10h 00 - 17h 00
-                </h5>
+                </div>
+              </div>
+
+              <div class="col-md-4 feature-box">
+                <div class="background-image-holder overlay">
+                  <img
+                    alt="Slide Background"
+                    class="background-image"
+                    src="img/redken_models.jpg"
+                  />
+                </div>
+
+                <div class="content">
+                  <h3>
+                    Explorez une grande selection de produits Redken et
+                    accessoires
+                  </h3>
+
+                  <a
+                    class="btn btn-white btn-sm4"
+                    href="https://monsalonweb.com/maysycoiffure/produits/"
+                    target="_blank"
+                  >
+                    Boutique Redken</a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -382,95 +404,71 @@
             </div>
           </div>
         </section>
-        <section>
-          <a id="boutiques" class="in-page-link"></a>
+        <section class="contained-projects">
+          <a id="emplacements" class="in-page-link"></a>
           <div class="container">
             <div class="row">
-              <div class="col-sm-12">
+              <div class="col-sm-6">
                 <div class="text-block">
                   <div class="detail-line"></div>
-                  <h5>Nos boutiques</h5>
+                  <h5>Nos emplacements</h5>
                 </div>
               </div>
             </div>
+
             <div class="row">
-              <div class="col-md-4 feature-box">
-                <div class="background-image-holder overlay">
-                  <img
-                    alt="Slide Background"
-                    class="background-image"
-                    src="img/giftcard.jpg"
-                  />
-                </div>
-
-                <div class="content">
-                  <h3>Profitez d'achats en carte cadeau utilisable en salon</h3>
-                  <select class="btn btn-white" id="checkout-options" name="checkout-options">
-                    <option value="price_1H9dSSFvdd9nhPzBFbgAMwXG">25$</option>
-                    <option selected value="price_1H9dSSFvdd9nhPzBVQgPyhq1">50$</option>
-                    <option value="price_1H9dSSFvdd9nhPzBYw6V0SuE">75$</option>
-                    <option value="price_1H9dSSFvdd9nhPzBh6bboUAp">100$</option>
-                    <option value="price_1H9dSSFvdd9nhPzBODfV0bYO">125$</option>
-                    <option value="price_1H9dSTFvdd9nhPzBBN46qdgs">150$</option>
-                  </select>
-                  <a
-                    class="btn btn-white"
-                    id="checkout-button-price"
-                    role="link"
-                    type="button"
+              <div class="col-sm-6 project col-md-6" data-filter="development">
+                <a href="#emplacements">
+                  <div class="salon background-image-holder">
+                    <img
+                      alt="project image"
+                      class="background-image"
+                      src="img/st-jerome.jpg"
+                    />
+                  </div>
+                </a>
+                <h2>Le Carrefour du Nord</h2>
+                <span
+                  ><a href="https://goo.gl/maps/YUr5aZcgQb92" target="_blank"
+                    >900 Av. Grignon, St-Jérome, J7Y 3S7</a
                   >
-                    Acheter 
-                  </a>
-                  <div id="error-message"></div>
-                </div>
+                  <br /><a href="tel:+14504324892">(450) 432-4892</a></span
+                >
+                <h5>
+                  Lundi, Mardi : 9h 30 - 18h 00 <br />Mercredi, Jeudi, Vendredi
+                  : 9h 30 - 21h 00 <br />Samedi : 9h 00 - 17h 00 / Dimanche :
+                  10h 00 - 17h 00
+                </h5>
               </div>
 
-              <div class="col-md-4 feature-box">
-                <div class="background-image-holder overlay">
-                  <img
-                    alt="Slide Background"
-                    class="background-image"
-                    src="img/shop3.jpg"
-                  />
-                </div>
-
-                <div class="content">
-                  <h3>Ne manquez pas notre boutique en ligne Moroccanoil</h3>
-
-				  <a class="btn btn-white btn-sm4" href="#" target="_blank"
-                    >Bientôt disponible</a
+              <div
+                class="col-sm-6 project col-md-6"
+                data-filter="branding,development"
+              >
+                <a href="#emplacements">
+                  <div class="salon background-image-holder">
+                    <img
+                      alt="project image"
+                      class="background-image"
+                      src="img/versaille1.jpg"
+                    />
+                  </div>
+                </a>
+                <h2>La Place Versailles</h2>
+                <span
+                  ><a href="https://goo.gl/maps/Z5wz1pMV5rN2" target="_blank"
+                    >7275 rue Sherbrooke est, Montréal, H1N 1E9</a
                   >
-                </div>
-              </div>
-
-              <div class="col-md-4 feature-box">
-                <div class="background-image-holder overlay">
-                  <img
-                    alt="Slide Background"
-                    class="background-image"
-                    src="img/redken_models.jpg"
-                  />
-                </div>
-
-                <div class="content">
-                  <h3>
-                    Visitez une grande selection de produits Redken et
-                    accessoires
-                  </h3>
-
-                  <a
-                    class="btn btn-white btn-sm4"
-                    href="https://monsalonweb.com/maysycoiffure/produits/"
-                    target="_blank"
-                  >
-                    Boutique Redken</a
-                  >
-                </div>
+                  <br /><a href="tel:+15144934662">(514) 493-4662</a></span
+                >
+                <h5>
+                  Lundi au Vendredi : 9h 30 - 21h 00 <br />Samedi : 9h 00 - 17h
+                  00 <br />Dimanche : 10h 00 - 17h 00
+                </h5>
               </div>
             </div>
           </div>
         </section>
-
         <a id="contact" class="in-page-link"></a>
         <section class="contact-2">
           <div class="container">
