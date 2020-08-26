@@ -50,3 +50,6 @@ footer:nth-child(2n+1){
     color: white;
     font-weight: 400;
  }
+ #whiteLogo{
+     width:400px;
+ }
